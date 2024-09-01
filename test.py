@@ -1,4 +1,4 @@
-import fonction
+import fonction_math
 import tkinter
 
 # mettre à jour l'affichage d'un écran

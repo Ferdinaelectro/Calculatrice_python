@@ -1,8 +1,13 @@
-#====================================================================#
-#===========Nom============#
-     ATI
+#============================================================
+#=======Nom============#
+       ATI
 #=======Prénom=========#
-     Ferdinand
+       Ferdinand
+
+Démarrage du projet : 
+   >> 31 Aôut 2024
+
+NB : Pour executer le code vous devrier lancer main.py
 
      Description
 
@@ -13,6 +18,29 @@ Fonction egale :
 Fonction plus :
     - Change type_de_calcul par "+" pour indiquer une addition.
     - Fais appel à charger_nombre_complet pour inserer le nombre complet dans la liste tab_nombre_complet.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #=========================================================================#

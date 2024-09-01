@@ -1,7 +1,5 @@
-import fonction
+import fonction_math
 import math
-import tkinter
-import front_end
 
 type_de_calcul = "inconnu"
 curs = 0
@@ -114,6 +112,46 @@ def div():
     remplir_tableau_nombre_complet()
     print("diviser par ")
 
+def sinus():
+    global type_de_calcul
+    type_de_calcul = "sin"
+    print("sinus")
+
+def cosinus():
+    global type_de_calcul
+    type_de_calcul = "cos"
+    print("cosinus")
+
+def tangente():
+    global type_de_calcul
+    type_de_calcul = "tan"
+    print("tangente")
+
+def cotangente():
+    global type_de_calcul
+    type_de_calcul = "cotan"
+    print("cotangente")
+
+def logarithme():
+    global type_de_calcul
+    type_de_calcul = "log"
+    print("logarithme")
+
+def logarithme_neperien():
+    global type_de_calcul
+    type_de_calcul = "ln"
+    print("logarithme_neperien")
+
+def exponentielle():
+    global type_de_calcul
+    type_de_calcul = "exp"
+    print("exponentielle")
+
+def puissance():
+    global type_de_calcul
+    type_de_calcul = "puis"
+    print("puissance")
+
 def remplir_tableau_nombre_complet():
     global tab_nombre_complet
     global k
@@ -139,30 +177,55 @@ def egal():
     resultat = 0
     if (type_de_calcul == "x"):
         resultat = 1
+
+    # fonctions (+ , - , x , /) prenant plusieurs arguments
     while(t < k):
         print(tab_nombre_complet[t])
         if (type_de_calcul == "+"):
             if (t == 1):
-                resultat += fonction.addition(tab_nombre_complet[t-1],tab_nombre_complet[t])
+                resultat += fonction_math.addition(tab_nombre_complet[t-1],tab_nombre_complet[t])
             elif(t > 1):
-                resultat = fonction.addition(resultat,tab_nombre_complet[t])
+                resultat = fonction_math.addition(resultat,tab_nombre_complet[t])
         elif(type_de_calcul == "-"):
             if (t == 1):
-                resultat += fonction.soustraction(tab_nombre_complet[t-1],tab_nombre_complet[t])
+                resultat += fonction_math.soustraction(tab_nombre_complet[t-1],tab_nombre_complet[t])
             elif(t > 1):
-                resultat = fonction.soustraction(resultat,tab_nombre_complet[t])
+                resultat = fonction_math.soustraction(resultat,tab_nombre_complet[t])
         elif(type_de_calcul == "x"):
             if (t == 1):
-                resultat = fonction.multipliactionn(tab_nombre_complet[t-1],tab_nombre_complet[t])
+                resultat = fonction_math.multipliactionn(tab_nombre_complet[t-1],tab_nombre_complet[t])
             elif(t > 1):
-                resultat = fonction.multipliactionn(resultat,tab_nombre_complet[t])
+                resultat = fonction_math.multipliactionn(resultat,tab_nombre_complet[t])
         elif(type_de_calcul == "/"):
             if (t == 1):
-                resultat = fonction.division(tab_nombre_complet[t-1],tab_nombre_complet[t])
+                resultat = fonction_math.division(tab_nombre_complet[t-1],tab_nombre_complet[t])
             elif(t > 1):
-                resultat = fonction.division(resultat,tab_nombre_complet[t])
+                resultat = fonction_math.division(resultat,tab_nombre_complet[t])
+        else:
+            break
         t += 1
+
+    #fonctions à un seule paramètre
+    if (type_de_calcul == "sin"):
+        resultat = fonction_math.sinus(tab_nombre_complet[0])
+    elif (type_de_calcul == "cos"):
+        resultat = fonction_math.cosinus(tab_nombre_complet[0])
+    elif (type_de_calcul == "tan"):
+        resultat = fonction_math.tangente(tab_nombre_complet[0])  
+    elif (type_de_calcul == "cotan"):
+        resultat = fonction_math.cotangente(tab_nombre_complet[0])  
+    elif (type_de_calcul == "log"):
+        resultat = fonction_math.logarithme(tab_nombre_complet[0])
+    elif (type_de_calcul == "ln"):
+        resultat = fonction_math.logarithme_neperien(tab_nombre_complet[0])
+    elif (type_de_calcul == "exp"):
+        resultat = fonction_math.exponentielle(tab_nombre_complet[0])
+    elif (type_de_calcul == "puis"):
+        resultat = fonction_math.puissance_de_dix(tab_nombre_complet[0])
+
     print(f"le resultat du calcul est : {resultat}")
+    
+    # remet à zero tout les paramètre ainsi que la liste
     p = 0
     while(p < len(tab_nombre_complet)):
         tab_nombre_complet[p] = 0
@@ -170,6 +233,10 @@ def egal():
     k = 0
     t = 0
 
+    #retourne le resulat
+    return resultat
+
+# efface toout en remettant à jour les listes et les curseurs de positions
 def clear():
     global k
     global  t
@@ -179,7 +246,3 @@ def clear():
         p += 1
     k = 0
     t = 0
-
-
-def afficher_nombre():
-    return str(curs)
