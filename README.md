@@ -1,3 +1,2 @@
-# Calculatrice_python
-Ceci est un projet d'une calculatrice python
-Le projet ce trouve dans la branche : master
+#Python_calculator
+This is a project for a python calculator. The project is in the branch: master
