@@ -20,6 +20,12 @@ Features
 Prerequisites
 
     [Python, Tkinter]
+    ## Technologies Used
+
+This project was developed using:
+
+- Python
+
 
 bash
 
