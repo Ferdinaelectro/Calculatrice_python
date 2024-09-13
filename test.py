@@ -4,8 +4,8 @@ import tkinter
 # mettre à jour l'affichage d'un écran
 
 def main_essai():
-    print(fonction.addition(2,4))
-    print(fonction.puissance_de_dix(2))
+    print(fonction_math.addition(2,4))
+    print(fonction_math.puissance_de_dix(2))
 
 app = tkinter.Tk()
 app.title("Fenetre de test")

@@ -158,6 +158,8 @@ def remplir_tableau_nombre_complet():
     tab_nombre_complet[k] = recuperer_nombre()
     k += 1
 
+#fonction qui convetis une liste de nombre en un nombre complet 
+#Ex : (3,2,4) -> 324
 def recuperer_nombre():
     j = 0
     global index_tab
